@@ -1,0 +1,15 @@
+CORRECCIONES
+El handler obtiene el user pero no lo pasa al servicio para filtrar
+en los metodos de Get y nueva compra
+
+Los repositorios no reciben el usuario para filtrar.
+
+NOTAS
+// Este redirect lo hace solo el archivo request.js
+document.addEventListener("DOMContentLoaded", function(eventDOM) {
+    if (!isUserLogged()) {
+        window.location = 'login.html?reason=login_required';
+    }    
+})
+
+El docker-compose usa puerto 80 para el frontend que no esta habilitado, usar el 3000
